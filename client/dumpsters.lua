@@ -27,6 +27,7 @@ if Config.DumpsterDiving.Enable then if Config.Debug then print("^5Debug^7: ^2Lo
         Searching = false
         unloadAnimDict('amb@prop_human_bum_bin@base')
         --Give rewards
+        exports["cw-rep"]:updateSkill("searching", 5)
         for i = 1, math.random(1, 2) do toggleItem(true, Config.DumpItems[math.random(1, #Config.DumpItems)], math.random(1, 3)) Wait(100) end
         --If two random numbers match, give bonus
         if math.random(1, 3) == math.random(1, 3) then toggleItem(true, "rubber", math.random(1, 4)) Wait(100) end
